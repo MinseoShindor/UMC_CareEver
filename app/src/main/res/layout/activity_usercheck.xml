@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UserCheckActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/loginBackground"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="70dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <TextView
+        android:id="@+id/checkUser_tv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="normal"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        android:text="환영합니다!"
+        android:layout_marginTop="230dp"
+        android:layout_marginStart="70dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/checkUser_tv2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="normal"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        android:text="당신은 누구신가요?"
+        android:layout_marginTop="5sp"
+        app:layout_constraintTop_toBottomOf="@id/checkUser_tv1"
+        app:layout_constraintStart_toStartOf="@id/checkUser_tv1" />
+
+
+    <LinearLayout
+        android:id="@+id/LinearCheckBtn_userCheck"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="fill_horizontal"
+        android:layout_marginTop="40dp"
+        app:layout_constraintTop_toBottomOf="@id/checkUser_tv2"
+        app:layout_constraintStart_toStartOf="@id/checkUser_tv2">
+
+        <Button
+            android:id="@+id/btn_checkUser_help"
+            android:layout_marginStart="70dp"
+            android:layout_width="75dp"
+            android:layout_height="40dp"
+            android:background="@drawable/btn_usercheck"
+            android:text="봉사자"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+
+        <Button
+            android:id="@+id/btn_checkUser_manager"
+            android:layout_marginStart="50dp"
+            android:layout_width="75dp"
+            android:layout_height="40dp"
+            android:background="@drawable/btn_usercheck"
+            android:text="등록자"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+
+
+    </LinearLayout>
+
+
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="fill_horizontal"
+        android:layout_marginBottom="110dp"
+        app:layout_constraintBottom_toBottomOf="parent" >
+
+        <Button
+            android:id="@+id/btn_checkBtn1"
+            android:layout_marginStart="50dp"
+            android:layout_width="135dp"
+            android:layout_height="50dp"
+            android:background="@drawable/btn_usercheck_nextcheck"
+            android:text="확인"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btn_checkBtn2"
+            android:layout_marginStart="50dp"
+            android:layout_width="135dp"
+            android:layout_height="50dp"
+            android:background="@drawable/btn_usercheck_nextcheck"
+            android:text="취소"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/checkExplain_tv"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:gravity="left"
+        android:background="@drawable/textexplain_usercheck"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="30dp"
+        android:paddingStart="20dp"
+        android:paddingTop="20dp"
+        android:paddingEnd="20dp"
+        android:paddingBottom="20dp"
+        android:text="봉사자 등 하는 일 설명"
+        app:layout_constraintTop_toBottomOf="@id/LinearCheckBtn_userCheck" />
+
+    <ImageView
+        android:id="@+id/bannerText_Tail_help"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_banner_explain_tail180"
+        android:layout_marginStart="90dp"
+        app:layout_constraintBottom_toTopOf="@id/checkExplain_tv"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <ImageView
+        android:id="@+id/bannerText_Tail_manager"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_banner_explain_tail180"
+        android:layout_marginStart="220dp"
+        app:layout_constraintBottom_toTopOf="@id/checkExplain_tv"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</android.support.constraint.ConstraintLayout>
