@@ -142,16 +142,4 @@
         app:layout_constraintBottom_toTopOf="@id/checkExplain_tv"
         app:layout_constraintStart_toStartOf="parent"/>
 
-
-
-
-
-
-
-
-
-
-
-
-
 </android.support.constraint.ConstraintLayout>
