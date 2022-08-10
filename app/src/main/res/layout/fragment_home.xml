@@ -1,29 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/apk/res-auto"
+    xmlns:tools2="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" >
+    android:layout_height="match_parent"
+    android:background="@color/main_yellow" >
 
-    <android.support.constraint.ConstraintLayout
+    <TextView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="50dp"
+        android:text="봉사하기 게시판"
+        android:layout_marginBottom="10dp"
+        android:layout_marginStart="50dp"
+        android:textStyle="bold"
+        android:textSize="25dp"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toTopOf="@id/home_list_sv"/>
 
-        <android.support.v7.widget.RecyclerView
-            android:id="@+id/recycler_view"
+
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/home_bottom_menu"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="#cccccc"
+        app:itemIconTint="#d9d9d9"
+        app:itemTextColor="@color/black"
+        app:labelVisibilityMode="labeled"
+        app:menu="@menu/bottom_menu"/>
+
+    <ScrollView
+        android:id="@+id/home_list_sv"
+        android:layout_width="match_parent"
+        android:layout_height="580dp"
+        android:background="@drawable/background_login_input"
+        app:layout_constraintBottom_toTopOf="@id/home_bottom_menu">
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/home_list_search_view"
             android:layout_width="match_parent"
-            android:layout_height="530dp"
+            android:layout_height="60dp"
             android:layout_marginTop="10dp"
-            app:layoutManager="android.support.v7.widget.LinearLayoutManager"
-            android:orientation="vertical"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"/>
+            android:padding="10dp"
+            app:layout_constraintTop_toTopOf="@id/home_list_sv"
+            app:iconifiedByDefault="false"
+            app:queryHint="자료를 검색해보세요." >
+        </androidx.appcompat.widget.SearchView>
 
 
 
+    </ScrollView>
 
-    </android.support.constraint.ConstraintLayout>
 
-</ScrollView>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/home_list_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="450dp"
+        android:layout_marginTop="120dp"
+        android:orientation="vertical"
+        tools2:listitem="@layout/list_item"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintTop_toTopOf="@id/home_list_sv" >
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

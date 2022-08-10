@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:fitsSystemWindows="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SplashActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffcf30"
+        android:orientation="vertical" />
+
+    <TextView
+        android:id="@+id/splash_logo_care_ever"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CARE EVER"
+        android:fontFamily="@font/gmarketsansttfmedium"
+        android:textColor="@color/font_black"
+        android:textSize="30dp"
+        android:layout_marginTop="150dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/splash_subscribe_care_ever"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="반려동물 해외입양의 모든 것을 책임지다"
+        android:textSize="14dp"
+        android:fontFamily="@font/nanumsquareroundr"
+        android:textColor="@color/font_black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/splash_logo_care_ever"/>
+
+    <ImageView
+        android:id="@+id/splash_logo_iv"
+        android:layout_width="150dp"
+        android:layout_height="160dp"
+        android:src="@drawable/ic_care_ever_logo"
+        android:layout_marginTop="70dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/splash_subscribe_care_ever" />
+
+
+
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

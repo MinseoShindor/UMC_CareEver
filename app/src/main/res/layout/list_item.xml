@@ -50,6 +50,15 @@
             android:textSize="18dp">
         </TextView>
 
+        <TextView
+            android:id="@+id/help_list_date_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="2022.07.25~2022.07.30"
+            android:textColor="@color/list_pont"
+            android:textSize="13dp" />
+
 
     </LinearLayout>
 

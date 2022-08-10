@@ -1,8 +1,9 @@
 package com.example.umc_careever
 
 import android.content.Intent
-import android.support.v7.app.AppCompatActivity
+
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import com.example.umc_careever.databinding.ActivityMainBinding
 
 

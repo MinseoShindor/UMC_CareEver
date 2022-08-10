@@ -1,10 +1,9 @@
 package com.example.umc_careever
 
 import android.content.Intent
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.Button
+import androidx.appcompat.app.AppCompatActivity
 import com.example.umc_careever.databinding.ActivityUsercheckBinding
 
 class UserCheckActivity : AppCompatActivity() {
@@ -37,9 +36,9 @@ class UserCheckActivity : AppCompatActivity() {
             binding.checkExplainTv.setText("매니저가 하는 일 설명");
         }
 
-        binding.btnCheckBtn1.setOnClickListener {
-            startActivity(Intent(this, MainActivity::class.java))
-        }
+//        binding.btnCheckBtn1.setOnClickListener {
+//            startActivity(Intent(this, HomeActivity::class.java))
+//        }
 
 
     }

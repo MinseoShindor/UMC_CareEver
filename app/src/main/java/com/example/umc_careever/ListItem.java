@@ -22,4 +22,9 @@ public class ListItem {
         this.Title = title;
     }
 
+    public ListItem(String group, String title) {
+        this.Group = group;
+        this.Title = title;
+    }
+
 }

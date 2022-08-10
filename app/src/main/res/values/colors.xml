@@ -9,6 +9,10 @@
     <color name="white">#FFFFFFFF</color>
     <color name="pink_heart">#ff0054</color>
     <color name="list_pont">#6A6A6A</color>
+    <color name="main_orange">#FF9624</color>
+    <color name="main_yellow">#FFCF30</color>
+    <color name="font_black">#252525</color>
+    <color name="login_gray">#cccccc</color>
 
     <color name="loginBackground">#DEDEDE</color>
 </resources>
