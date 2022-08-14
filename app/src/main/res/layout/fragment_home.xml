@@ -5,6 +5,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/apk/res-auto"
     xmlns:tools2="http://schemas.android.com/tools"
+    android:id="@+id/home_fragment_service"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/main_yellow" >
@@ -22,24 +23,12 @@
 
 
 
-
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/home_bottom_menu"
-        android:layout_width="match_parent"
-        android:layout_height="70dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:background="#cccccc"
-        app:itemIconTint="#d9d9d9"
-        app:itemTextColor="@color/black"
-        app:labelVisibilityMode="labeled"
-        app:menu="@menu/bottom_menu"/>
-
     <ScrollView
         android:id="@+id/home_list_sv"
         android:layout_width="match_parent"
         android:layout_height="580dp"
         android:background="@drawable/background_login_input"
-        app:layout_constraintBottom_toTopOf="@id/home_bottom_menu">
+        app:layout_constraintBottom_toBottomOf="parent">
 
         <androidx.appcompat.widget.SearchView
             android:id="@+id/home_list_search_view"
@@ -55,7 +44,6 @@
 
 
     </ScrollView>
-
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/home_list_recycler_view"

@@ -1,0 +1,59 @@
+package com.example.umc_careever
+
+import android.annotation.SuppressLint
+import android.view.LayoutInflater
+import android.view.ViewGroup
+import androidx.recyclerview.widget.RecyclerView
+import com.example.umc_careever.databinding.ListItemBinding
+import androidx.viewpager2.adapter.FragmentStateAdapter
+
+class ListRVAdapter(private val itemList: ArrayList<Help>): RecyclerView.Adapter<ListRVAdapter.ViewHolder>() {
+
+    interface MyItemClickListener {
+        fun onItemClick(help: Help)
+        fun onRemoveHelp(position: Int)
+    }
+
+    private lateinit var mItemClickListener: MyItemClickListener
+    fun setMyItemClickListener(itemClickListener: MyItemClickListener) {
+        mItemClickListener = itemClickListener
+    }
+
+    fun addItem(help: Help) {
+        itemList.add(help)
+        notifyDataSetChanged()
+    }
+
+    fun removeItem(position: Int) {
+        itemList.removeAt(position)
+        notifyDataSetChanged()
+    }
+
+
+
+    override fun onCreateViewHolder(viewGroup: ViewGroup, viewType: Int): ListRVAdapter.ViewHolder {
+        val binding : ListItemBinding = ListItemBinding.inflate(LayoutInflater.from(viewGroup.context), viewGroup, false)
+
+        return ViewHolder(binding)
+    }
+
+    override fun onBindViewHolder(holder: ListRVAdapter.ViewHolder, position: Int) {
+        holder.bind(itemList[position])
+        holder.itemView.setOnClickListener {
+            mItemClickListener.onItemClick(itemList[position]) }
+    }
+
+    override fun getItemCount(): Int = itemList.size
+
+
+    inner class ViewHolder(val binding: ListItemBinding): RecyclerView.ViewHolder(binding.root) {
+
+        fun bind(help: Help) {
+            binding.helpListDateTv.text = help.date
+            binding.helpListGroupTv.text = help.group
+            binding.helpListTitleTv.text = help.title
+        }
+    }
+
+
+}

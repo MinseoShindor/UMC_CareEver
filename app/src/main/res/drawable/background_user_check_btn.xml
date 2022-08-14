@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<shape xmlns:android="http://schemas.android.com/apk/res/android"
-    android:shape="rectangle">
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true" android:drawable="@drawable/btn_usercheck_nextcheck"/>
+    <item android:state_focused="true" android:drawable="@drawable/btn_usercheck_nextcheck" />
+    <item android:drawable="@drawable/btn_usercheck_nextcheck" />
 
-    <solid android:color="#FF9624"/>
-
-    <corners
-        android:radius="20dp"/>
-
-    <stroke
-        android:width="1dp"
-        android:color="#ff9624"/>
-</shape>
+</selector>
