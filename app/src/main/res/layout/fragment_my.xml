@@ -7,14 +7,118 @@
     android:id="@+id/my_fragment"
     tools:context=".MyFragment">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff"
+        android:orientation="vertical" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="마이"
+            android:textSize="20sp"
+            android:fontFamily="@font/nanumsquareroundeb"
+            android:textColor="@color/font_black"
+            android:layout_marginStart="20dp" />
+
+        <ImageView
+            android:id="@+id/alarm_icon_my"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_alarm"
+            android:layout_marginStart="310dp" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/my_profile_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:layout_marginTop="100dp"
+        >
+
+        <ImageView
+            android:id="@+id/my_profile_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/circle_profile_input" />
+
+        <TextView
+            android:id="@+id/my_profile_nickname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="댕댕러버 님"
+            android:textSize="18sp"
+            android:fontFamily="@font/nanumsquareroundeb"
+            android:textColor="@color/font_black" />
+
+        <ImageView
+            android:id="@+id/my_profile_idChange"
+            android:layout_width="100dp"
+            android:layout_height="20dp"
+            android:padding="1dp"
+            android:src="@drawable/ic_idchange"
+            android:layout_marginTop="8dp" />
+
+    </LinearLayout>
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text=" my frm"
-        android:textSize="16sp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent" />
+        android:text="설정"
+        android:textSize="20sp"
+        android:fontFamily="@font/nanumsquareroundr"
+        android:textColor="@color/font_black"
+        android:layout_marginTop="400dp"
+        android:layout_marginStart="20sp" />
+
+    <View
+        android:id="@+id/my_profile_set_view1"
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:background="#cccccc"
+        android:layout_marginTop="440dp" />
+
+
+    <View
+        android:id="@+id/my_profile_set_view2"
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:background="#cccccc"
+        android:layout_marginTop="480dp" />
+
+    <View
+        android:id="@+id/my_profile_set_view3"
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:background="#cccccc"
+        android:layout_marginTop="520dp" />
+
+    <View
+        android:id="@+id/my_profile_set_view4"
+        android:layout_width="match_parent"
+        android:layout_height="0.5px"
+        android:background="#cccccc"
+        android:layout_marginTop="560dp" />
+
+    <View
+        android:id="@+id/my_profile_set_view5"
+        android:layout_width="match_parent"
+        android:layout_height="0.5px"
+        android:background="#cccccc"
+        android:layout_marginTop="600dp" />
+
 
 </FrameLayout>
