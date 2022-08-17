@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.UMC_CareEver">
         <activity
+            android:name=".alarmActivity"
+            android:exported="true" />
+        <activity
+            android:name=".AlarmActivity"
+            android:exported="true" />
+        <activity
             android:name=".signUp_profile"
             android:exported="true" />
         <activity

@@ -11,4 +11,5 @@ data class Help(
     var title: String? = "",
     var group: String? = "",
     var date: String? = "",
+//    var isLike: Boolean? = false,
 )

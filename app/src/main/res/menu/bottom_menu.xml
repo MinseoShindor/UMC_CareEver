@@ -6,18 +6,20 @@
     <item
         android:id="@+id/first_tab"
         app:showAsAction="always"
-        android:enabled="true"
+         android:enabled="true"
+        android:icon="@drawable/ic_first_active"
         android:title="봉사하기" />
     <item
         android:id="@+id/second_tab"
         app:showAsAction="always"
         android:enabled="true"
+        android:icon="@drawable/ic_second_unactive"
         android:title="봉사현황"/>
 
     <item
         android:id="@+id/third_tab"
         app:showAsAction="always"
-        android:src="@drawable/menu_chat"
+        android:icon="@drawable/ic_third_unactive"
         android:enabled="true"
         android:title="채팅">
     </item>
@@ -26,6 +28,7 @@
         android:id="@+id/fourth_tab"
         app:showAsAction="always"
         android:enabled="true"
+        android:icon="@drawable/ic_fourth_unactive"
         android:title="MY">
     </item>
 

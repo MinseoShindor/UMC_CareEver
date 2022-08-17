@@ -13,6 +13,8 @@
         android:background="#ffffff"
         android:orientation="vertical" />
 
+
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -31,9 +33,10 @@
         <ImageView
             android:id="@+id/alarm_icon_my"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_alarm"
-            android:layout_marginStart="310dp" />
+            android:layout_height="match_parent"
+            android:layout_marginStart="310dp"
+            android:src="@drawable/ic_alarm" />
+
 
     </LinearLayout>
 
@@ -48,11 +51,16 @@
         android:layout_marginTop="100dp"
         >
 
-        <ImageView
-            android:id="@+id/my_profile_iv"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/circle_profile_input" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/sign_up_profile_iv"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:background="@android:color/transparent"
+            app:civ_border_color="#ffcf30"
+            app:civ_border_width="3dp"
+            android:src="@drawable/ic_care_ever_logo"
+            app:civ_border_overlay="false" />
 
         <TextView
             android:id="@+id/my_profile_nickname"
@@ -72,7 +80,69 @@
             android:src="@drawable/ic_idchange"
             android:layout_marginTop="8dp" />
 
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30px"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/my_profile_like_btn"
+                android:layout_width="320px"
+                android:layout_height="220px"
+                android:background="@drawable/ic_btn_my_profile_like"
+                android:text="3"
+                android:fontFamily="@font/nanumsquareroundr"
+                android:textSize="27sp"
+                android:textColor="#ffffff"
+                android:layout_marginTop="50px"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#ffffff"
+                android:orientation="vertical" />
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="20px"
+                android:layout_marginTop="50px"
+                android:background="#ffffff" />
+
+            <Button
+                android:id="@+id/my_profile_save_btn"
+                android:layout_width="320px"
+                android:layout_height="220px"
+                android:layout_marginTop="50px"
+                android:text="1"
+                android:fontFamily="@font/nanumsquareroundr"
+                android:textColor="#ffffff"
+                android:textSize="27sp"
+                android:background="@drawable/ic_btn_my_profile_save" />
+
+        </LinearLayout>
+
     </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="좋아요"
+        android:textColor="#ffffff"
+        android:textSize="14sp"
+        android:fontFamily="@font/nanumsquareroundr"
+        android:layout_marginTop="385dp"
+        android:layout_marginStart="125dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="임시저장"
+        android:textColor="#ffffff"
+        android:textSize="14sp"
+        android:fontFamily="@font/nanumsquareroundr"
+        android:layout_marginTop="385dp"
+        android:layout_marginStart="240dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -81,15 +151,126 @@
         android:textSize="20sp"
         android:fontFamily="@font/nanumsquareroundr"
         android:textColor="@color/font_black"
-        android:layout_marginTop="400dp"
-        android:layout_marginStart="20sp" />
+        android:layout_marginTop="420dp"
+        android:layout_marginStart="30sp" />
 
     <View
         android:id="@+id/my_profile_set_view1"
         android:layout_width="match_parent"
         android:layout_height="2px"
         android:background="#cccccc"
-        android:layout_marginTop="440dp" />
+        android:layout_marginTop="460dp" />
+
+    <LinearLayout
+        android:id="@+id/my_profile_layout1"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="459dp">
+
+        <TextView
+            android:id="@+id/my_profile_st_tv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="알림설정"
+            android:fontFamily="@font/nanumsquareroundr"
+            android:textSize="15sp"
+            android:textColor="@color/font_black"
+            android:layout_marginTop="12dp"
+            android:layout_marginStart="30sp" />
+
+        <ImageView
+            android:id="@+id/my_profile_st_toggle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_my_setting_toggle"
+            android:layout_marginStart="230dp"
+            android:layout_marginTop="10dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="501dp" >
+
+        <TextView
+            android:id="@+id/my_profile_st_tv2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="로그아웃"
+            android:fontFamily="@font/nanumsquareroundr"
+            android:textSize="15sp"
+            android:textColor="@color/font_black"
+            android:layout_marginTop="12dp"
+            android:layout_marginStart="30sp" />
+
+        <ImageView
+            android:id="@+id/my_profile_set_vector1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_vector"
+            android:layout_marginTop="12dp"
+            android:layout_marginStart="290dp" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="540dp" >
+
+        <TextView
+            android:id="@+id/my_profile_st_tv3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="일반설정"
+            android:fontFamily="@font/nanumsquareroundr"
+            android:textSize="15sp"
+            android:textColor="@color/font_black"
+            android:layout_marginTop="12dp"
+            android:layout_marginStart="30sp" />
+
+        <ImageView
+            android:id="@+id/my_profile_set_vector2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_vector"
+            android:layout_marginTop="12dp"
+            android:layout_marginStart="290dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="580dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/my_profile_st_tv4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="문의사항"
+            android:fontFamily="@font/nanumsquareroundr"
+            android:textSize="15sp"
+            android:textColor="@color/font_black"
+            android:layout_marginTop="12dp"
+            android:layout_marginStart="30sp" />
+
+        <ImageView
+            android:id="@+id/my_profile_set_vector3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_vector"
+            android:layout_marginTop="12dp"
+            android:layout_marginStart="290dp" />
+
+    </LinearLayout>
+
 
 
     <View
@@ -97,28 +278,30 @@
         android:layout_width="match_parent"
         android:layout_height="2px"
         android:background="#cccccc"
-        android:layout_marginTop="480dp" />
+        android:layout_marginTop="500dp" />
 
     <View
         android:id="@+id/my_profile_set_view3"
         android:layout_width="match_parent"
         android:layout_height="2px"
         android:background="#cccccc"
-        android:layout_marginTop="520dp" />
+        android:layout_marginTop="540dp" />
+
 
     <View
         android:id="@+id/my_profile_set_view4"
         android:layout_width="match_parent"
-        android:layout_height="0.5px"
+        android:layout_height="2px"
         android:background="#cccccc"
-        android:layout_marginTop="560dp" />
+        android:layout_marginTop="580dp" />
+
 
     <View
         android:id="@+id/my_profile_set_view5"
         android:layout_width="match_parent"
-        android:layout_height="0.5px"
+        android:layout_height="2px"
         android:background="#cccccc"
-        android:layout_marginTop="600dp" />
+        android:layout_marginTop="620dp" />
 
 
 </FrameLayout>
